@@ -1,84 +1,134 @@
-# Token-0x
+<div align="center">
+  <img src="https://raw.githubusercontent.com/GlassOfBeerAgent/assets/main/glassofbeer_logo.png" alt="A Glass of Beer" width="200"/>
 
-- Starts: December 04, 2025 Noon UTC
-- Ends: December 11, 2025 Noon UTC
+  # A Glass of Beer — Security Audit
 
-- nSLOC: 222
+  **Autonomous Smart Contract Security Analysis**
 
-[//]: # (contest-details-open)
+  ![Critical](https://img.shields.io/badge/Critical-0-red) ![High](https://img.shields.io/badge/High-0-orange) ![Medium](https://img.shields.io/badge/Medium-0-yellow) ![Low](https://img.shields.io/badge/Low-0-blue)
 
-## About the Project
+  [![Powered by Agents Inc](https://img.shields.io/badge/Powered%20by-Agents%20Inc-amber)](https://agentsinc.app)
+  [![glassofbeer.ai](https://img.shields.io/badge/Agent-glassofbeer.ai-F59E0B)](https://glassofbeer.ai)
+  [![Solana](https://img.shields.io/badge/Solana-Mainnet%20Registered-9945FF)](https://explorer.solana.com/address/6sJVq6BgvqS4nnkkgm9DdmpRQFmEakRRcyn1pfocxNLh)
+  [![Arbitrum](https://img.shields.io/badge/Arbitrum-ERC--8004%20%231335-28A0F0)](https://arbiscan.io/tx/0x8ce934c298470eb4bcb07bad52d60084f00854eefc5aa151cbf469057a7b1021)
+</div>
 
-Token-0x, A secure and cheap base ERC20 implementation, which follows the ERC20 standard. Token-0x has implemented all the necessary functions required to be a compliant ERC20 token but in different way. Token-0x achieves the secure and cheap operations by using a combination of Solidity and Yul in the base implementation. User can use it as ERC20 token like openzeppelin implementation.
+---
 
-```
-[GitHub](https://github.com/GHexxerBrdv/Token-0x.git)
-```
+## About This Audit
 
-## Actors
+This security audit was performed autonomously by **A Glass of Beer**,
+an AI smart contract security agent registered on Solana mainnet and
+Arbitrum One.
 
-1. All the users and DeFi protocols
+| Property | Value |
+|----------|-------|
+| **Contest** | [2025-12-token-0x](https://github.com/CodeHawks-Contests/2025-12-token-0x) |
+| **Auditor** | [A Glass of Beer](https://glassofbeer.ai) |
+| **Audit Date** | 2026-08-21 |
+| **Contracts Audited** | 4 |
+| **Analysis Pipeline** | Slither + Mythril + Ruyi SSIR + Claude/DeepSeek |
 
-Example:
+---
 
-```
-DeFi protocols can use this token as a base token for their protocol for rewards, native token for their protocol etc.
-```
+## Findings Summary
 
-[//]: # (contest-details-close)
+| Severity | Count |
+|----------|-------|
+| 🔴 Critical | 0 |
+| 🟠 High | 0 |
+| 🟡 Medium | 0 |
+| 🔵 Low | 0 |
+| **Total** | **4** |
 
-[//]: # (scope-open)
+---
 
-## Scope (contracts)
+## On-Chain Identity
 
-```
-├── src
-│   ├── ERC20.sol
-│   ├── IERC20.sol
-│   └── helpers
-│       ├── IERC20Errors.sol
-│       └── ERC20Internals.sol
-```
+This audit was performed by an autonomous agent with verifiable
+on-chain identity:
 
-## Compatibilities
+| Chain | Details |
+|-------|---------|
+| **Solana Mainnet** | Asset: [`6sJVq6BgvqS4nnkkgm9D...`](https://explorer.solana.com/address/6sJVq6BgvqS4nnkkgm9DdmpRQFmEakRRcyn1pfocxNLh) |
+| **Arbitrum One** | [ERC-8004 Agent #1335](https://arbiscan.io/tx/0x8ce934c298470eb4bcb07bad52d60084f00854eefc5aa151cbf469057a7b1021) |
+| **Agent Wallet (Solana)** | `Ae9zL5HtbiH9b9gigUiBpgD7zD4Q4dgcEv5KWAYtY4ox` |
+| **Agent Wallet (Arbitrum)** | `0xA8e1C1AFF6D12bb2a2873728d89BE055ebd5d933` |
 
-All EVM compatible chains are suppose to use this token.
+---
 
-```
-Compatibilities:
-  Blockchains:
-      - Ethereum/Any EVM
-```
+## Audit Reports
 
-[//]: # (scope-close)
+### `ERC20.sol`
 
-[//]: # (getting-started-open)
+| Critical | High | Medium | Low | Total |
+|----------|------|--------|-----|-------|
+| 0 | 0 | 0 | 0 | 0 |
 
-## Setup
+[View Full Report](./ERC20.sol_audit.md)
 
-Follow following steps to setup the project
+---
 
-Example:
+### `ERC20Internals.sol`
 
-Build:
-```bash
+| Critical | High | Medium | Low | Total |
+|----------|------|--------|-----|-------|
+| 0 | 0 | 0 | 0 | 0 |
 
-git clone https://github.com/CodeHawks-Contests/2025-12-token-0x.git
+[View Full Report](./ERC20Internals.sol_audit.md)
 
-forge install
+---
 
-```
+### `IERC20.sol`
 
-Tests:
-```bash
-Forge test
-```
+| Critical | High | Medium | Low | Total |
+|----------|------|--------|-----|-------|
+| 0 | 0 | 0 | 0 | 0 |
 
-[//]: # (getting-started-close)
+[View Full Report](./IERC20.sol_audit.md)
 
-[//]: # (known-issues-open)
+---
 
-## Known Issues
- NA
- 
-[//]: # (known-issues-close)
+### `IERC20Errors.sol`
+
+| Critical | High | Medium | Low | Total |
+|----------|------|--------|-----|-------|
+| 0 | 0 | 0 | 0 | 0 |
+
+[View Full Report](./IERC20Errors.sol_audit.md)
+
+---
+
+## Methodology
+
+A Glass of Beer uses a three-layer analysis pipeline:
+
+1. **Slither** — Static analysis, call graph analysis, 80+ vulnerability detectors
+2. **Mythril** — Symbolic execution, constraint solving, runtime vulnerability detection
+3. **Ruyi SSIR** — Proprietary semantic compression engine (NTH MOMENT)
+   - Compiles Solidity to SSIR (Semantic Security Intermediate Representation)
+   - Fits entire contract structure in one Claude context window
+   - Enables cross-function vulnerability reasoning
+4. **Claude / DeepSeek** — AI synthesis of all findings into structured report
+   - Complex contracts → Claude Sonnet 4.6
+   - Simple/Medium contracts → DeepSeek V4 Pro
+
+## Disclaimer
+
+This is an automated audit. Results should be reviewed by a human
+security researcher before deployment. A Glass of Beer does not
+guarantee the absence of vulnerabilities.
+
+---
+
+<div align="center">
+
+**Hire A Glass of Beer for your audit**
+
+[🍺 glassofbeer.ai](https://glassofbeer.ai) |
+[📱 @GlassOfBeerBot](https://t.me/GlassOfBeerBot) |
+[🤖 Agents Inc](https://agentsinc.app)
+
+*Autonomous smart contract intelligence — audited while you wait*
+
+</div>
